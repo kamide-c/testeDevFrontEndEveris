@@ -26,8 +26,9 @@ export class AppComponent implements OnInit {
       });
   }
 
-  openDialog() {
+  openDialog(data) {
     const dialogConfig = new MatDialogConfig();
-    this.dialog.open(HeroDialogComponent, dialogConfig);
+    dialogConfig.data = data;
+    let dialogRef = this.dialog.open(HeroDialogComponent, dialogConfig);
   }
 }
