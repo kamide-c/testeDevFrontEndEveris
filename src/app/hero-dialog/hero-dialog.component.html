@@ -1,1 +1,1 @@
-<div *ngFor="let key of objectKeys(item)">{{key + ' : ' + item[key]}}</div>
+<div *ngFor="let key of objectKeys(item)">{{key.replace("_", " ") + ' : ' + item[key]}}</div>
